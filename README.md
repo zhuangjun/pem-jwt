@@ -4,6 +4,11 @@ If you want to encode/decode JWT using pem file in .NET, hope this library would
 
 This library is build base on ***jose-jwt*** and ***BouncyCastle***.
 
+###  How to install
+```
+Install-Package PemJwt
+```
+
 ###  How to use
 
 #### Encode

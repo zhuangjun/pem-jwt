@@ -19,7 +19,7 @@ var claims = new Claims()
 	}
 };
 
-var jwt = JwtIssuer.Encode(claims, privateKeyId);
+var jwt = PemJwt.JwtIssuer.Encode(claims, privateKeyId);
 
 // use jwt here
 ```
@@ -29,7 +29,7 @@ var jwt = JwtIssuer.Encode(claims, privateKeyId);
 ```
 var publicKeyId = "keys/public/test.pem";
 var jwt = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJoZWxsbyI6IndvcmxkIiwiZXhwIjoxNDkyMDc1Mzk2LCJpYXQiOjE0OTIwNzUzMzh9.PqhQJTjM9aCZxIsf2MmmfU-E0arP8447OTce55IRKYlxUFDOi4wtV7K76mA7PRZL4CPMzpBHo1zfKFG8U5arPpwDAQmwXZ692Unc9Zp8_4zfwQW348rClvQOWiDIWqcKrH9u5GrBOi6wQjPAxf8BeYJfX2iQYRmfXo8pPpHXWCQ";
-var payload = JwtIssuer.Decode(jwt, publicKeyId);
+var payload = PemJwt.JwtIssuer.Decode(jwt, publicKeyId);
 
 // use payload here
 

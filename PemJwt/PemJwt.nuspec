@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>PemJwt</id>
+    <version>1.0.1</version>
+    <title>PemJwt</title>
+    <authors>Daniel.Zhuang</authors>
+    <owners>dzhuang</owners>
+    <projectUrl>https://github.com/zhuangjun/pem-jwt</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Encode and Decode JSON Web Token(JWT) using pem file for .NET</description>
+    <copyright>Copyright 2017</copyright>
+    <tags>jwt pem</tags>
+    <dependencies>
+      <dependency id="BouncyCastle" version="1.8.1" />
+      <dependency id="jose-jwt" version="2.2.0" />
+    </dependencies>
+  </metadata>
+</package>

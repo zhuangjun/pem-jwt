@@ -138,7 +138,7 @@ namespace PemJwt
         private static RSAParameters GetPublicPemRSAParameters(string publicKeyId)
         {
             RSAParameters rsaKeyInfo;
-            if (!_privateRsaParametersDist.TryGetValue(publicKeyId, out rsaKeyInfo))
+            if (!_publicRsaParametersDist.TryGetValue(publicKeyId, out rsaKeyInfo))
             {
                 if (!File.Exists(publicKeyId))
                 {
@@ -156,7 +156,7 @@ namespace PemJwt
                     var keyPair = (RsaKeyParameters)new PemReader(txtreader).ReadObject();
                     rsaKeyInfo = DotNetUtilities.ToRSAParameters(keyPair);
 
-                    _privateRsaParametersDist.TryAdd(publicKeyId, rsaKeyInfo);
+                    _publicRsaParametersDist.TryAdd(publicKeyId, rsaKeyInfo);
                 }
             }
 

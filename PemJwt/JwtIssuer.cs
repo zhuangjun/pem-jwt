@@ -117,7 +117,7 @@ namespace PemJwt
                     throw new ArgumentException("Invalid private key path:" + privateKeyId);
                 }
 
-                var pemContent = File.ReadAllText(privateKeyId);
+                var pemContent = File.ReadAllText(privateKeyId).Trim();
                 if (!IsPrivateKey(pemContent))
                 {
                     throw new ArgumentException("Invalid private pem format:" + privateKeyId);
